@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+:root{
+    --primary-color:#6366F1;
+    --accent-color:#3f83f8;
+    --text-color:#333333;
+    --link-color:#2563eb;
+    --background-color:#ffffff;
+    --light-gray:#f0f0f0;
+    --gray:#808080;
+    --dark-gray:#555;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;   
+    text-decoration: none; 
+}
+body{
+    height: 100vh;
+    text-align: center;
+    background-color: var(--background-color);
+    padding: 0.1rem;
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  padding: 1.5rem;
+  margin-left: 1.4rem;
+  gap: 10rem;
+  margin-top: 2rem;
+}
+/* .header-content{
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+} */
+.header-content {
+  display: flex;
+  justify-content: flex-start; /* Align items to the start (left) of the container */
+  align-items: flex-start; /* Align items to the top of the container */
+}
+
+.pri {
+  height: 125px;
+  width: 220px;
+  color:#3f83f8
+}
+
+.nav{
+  display: none;
+  gap: 7rem;
+}
+@media(min-width:768px) {
+  .nav{
+      display: flex;
+  }
+}
+.nav-link{
+  color: #718096;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transform: color 0.1s;
+}
+.nav-link:hover{
+  color: var(--link-color);
+}
+.content {
+  max-width: 1280px;
+  max-height: fit-content;
+  width: 90%;
+  /* margin-top: 2rem; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Distribute space evenly between flex items */
+  /* gap: 2rem; */
+  /* padding: 1rem; */
+}
+.left-side,
+.right-side {
+  flex-grow: 1; /* Equal flex-grow values to distribute space evenly */
+}
+.left-side{
+  text-align: start;
+  animation: slideFromLeft 1s ease forwards; 
+  opacity: 0; 
+  padding-left: 4rem;
+  padding-top: 3rem;
+}
+@keyframes slideFromLeft{
+  0%{
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  100%{
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+.fheading{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+.fheadingintro{
+  padding-left: 0.5rem;
+  font-size: 2.5rem;
+}
+.hello{
+  padding-left: 0.65rem;
+  height: 50px;
+  width: 50px;
+}
+.pintro{
+  padding-top: 3rem;
+  line-height: 3rem;
+  color: var(--gray);
+  font-size: 1.675rem;
+}
+
+.icons{
+  margin: 24px;
+  padding: top 50px; 
+}
+.ficon-logos img {
+  padding: 0.5rem;
+}
+
+.fbutton-box {
+  margin-top: 4rem;
+  padding: 2rem 0; /* Increased padding to increase height */
+  gap: 2rem; /* Added a gap between button boxes */
+  display: flex;
+  flex-direction: row;
+  justify-content: start; /* Center the button boxes horizontally */
+}
+
+.fbutton {
+  padding: 1.5rem 3rem; /* Increased padding for larger buttons */
+  font-size: 2rem; /* Adjusted font size */
+  font-weight: 600;
+  border: 3px solid #645d5d;
+  border-radius: 10px; /* Increased border radius for a more rounded appearance */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Added transition for smoother hover effect */
+}
+
+.fbutton:hover {
+  background-color: var(--accent-color);
+  color: white;
+  transform: scale(1.05); /* Slight scale effect on hover for a subtle interaction */
+}
+.github{
+  height: 60px;
+  width: 60px;
+}
+.linkedin{
+  height: 60px;
+  width: 60px;
+}
+.google{
+  height: 60px;
+  width: 60px;
+}
+.facebook{
+  height: 60px;
+  width: 60px;
+}
+.twitter{
+  padding-left: -11px;
+  height: 60px;
+  width: 70px;
+}
+
+.right-side {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container {
+  width: 100%; /* Adjust as needed */
+}
+.doingWorkContent {
+  max-width: 660%; /* Ensure the image takes up the full width of its container */
+  height: 700px;
+}
+
+/* Overall page styling */
+.s-page {
+  /* max-width: 1280px; */
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* Adjust spacing between left and right */
+  padding: 1rem;
+  gap: 25rem;
+}
+
+/* Styling for the left side */
+.s-left {
+  width: 25%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.s-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+#s-img{
+  height: 970px;
+  width: 760px;
+}
+
+/* Styling for the right side */
+.s-right {
+  flex: 1; /* Take up remaining space */
+  text-align: left; /* Align text to the left */
+  animation: slideFromLeft 1s ease forwards;
+  opacity: 0;
+  padding: 2rem; /* Add padding for spacing */
+}
+
+.s-heading {
+  font-size: 3.5rem; /* Decrease font size for the heading */
+  color: #333; /* Change heading color */
+  margin-bottom: 1.5rem; /* Add margin bottom for spacing */
+}
+
+.s-para {
+  width: 100%;
+  font-size: 1.2rem; /* Decrease font size for the paragraph */
+  line-height: 1.6; /* Increase line height for better readability */
+  color: #666; /* Change paragraph color */
+}
+
+.s-logos {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  margin-bottom: 2rem; /* Add margin bottom for spacing */
+}
+
+.tech-logos {
+  max-width: 100%; /* Ensure logos don't overflow */
+  height: 600px;
+  width: 700px;
+  box-shadow: 15px 15px 15px rgb(153, 43, 43);
+}
+.tech-logos:hover {
+  transform: scale(1.05);
+}
+
+.sec-points {
+  margin-bottom: 2rem; /* Add margin bottom for spacing */
+}
+
+.sec-points ol {
+  list-style-type: none; /* Remove default list styling */
+  counter-reset: my-counter; /* Reset counter for custom numbering */
+}
+
+.sec-points ol li {
+  font-size: 1.26rem;
+  color: #666;
+  position: relative; /* Position relative for custom numbering */
+  padding-left: 2rem; /* Add padding for better indentation */
+  margin-bottom: 1rem; /* Add margin bottom for spacing between points */
+}
+
+.sec-points ol li:before {
+  content: counter(my-counter); /* Use counter for numbering */
+  counter-increment: my-counter; /* Increment counter for each item */
+  position: absolute; /* Position absolute for custom numbering */
+  left: 0; /* Position at the beginning of each item */
+  font-weight: bold; /* Bold font for numbering */
+  color: #666; /* Change color for numbering */
+}
+
+/* Animation for the right side */
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* Third Page Styles */
+.t-page {
+  display: flex;
+  justify-content: space-between;
+  height: 85%;
+  width: 100%;
+}
+
+.t-left {
+  width: 50%;
+  margin-top: 2rem;
+  padding-left: 5rem;
+}
+
+.t-right {
+  width: 50%;
+}
+
+.t-heading {
+  padding-top: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.t-heading {
+  color: #333;
+  font-size: 4rem;
+}
+
+.t-bar {
+  margin-bottom: 2rem;
+  font-size: 2.26rem;
+  color: #666;
+
+}
+.progress {
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+}
+.progress-bar {
+  height: 100%;
+  font-size: 14px; 
+}
+/* Image Styles */
+.t-img {
+  width: 60%;
+  height: 90%;
+  display: flex;
+ 
+}
+
+.forth-container{
+  background-attachment: var(--background-color);
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.forth-content{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* gap: 2rem; */
+}
+.forth-title{
+  font-size: 3.875rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2rem;
+}
+.f-trophy{
+  padding-left: 1rem;
+  width: 80px;
+  height: 60px;
+}
+.forth-grid{
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(335px,1fr));
+  gap: 6.375rem;
+}
+.forth-card{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(118, 117, 117);
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1.2rem;
+  /* gap: 1rem; */
+  height: 500px;
+  width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 4px 4px 4px grey;
+}
+.forth-card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0,2);
+  border: 1px solid blue;
+}
+.forth-avatar{
+  height: 60%;
+}
+.forth-avatar img{
+  height: 100%;
+  width: 90%;
+}
+.forth-text{
+  color: #555;
+  font-size: 1.875rem;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+.forth-desc{
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.675rem;
+}
+
+
+
+.fifth-page {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem;
+  margin-top: 2rem;
+}
+
+.fifth-heading {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  padding-left: 4rem;
+}
+
+.fifth-content {
+  width: 60%;
+  padding-left: 3rem;
+}
+.f-heading{
+  font-size:4.875rem;
+  font-weight: 4rem;
+  color: var(--text-color);
+  padding-bottom: 2rem;
+}
+
+/* Additional styling for the image and paragraph */
+
+
+.l-page {
+  width: 100%;
+  margin: 20px auto;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.l-heading {
+  color: var(--text-color);
+  padding-left: 2rem;
+}
+
+.l-heading h3 {
+  margin: 2rem;
+  padding-left: 2rem;
+  font-size: 4.25rem;
+}
+
+.l-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.l-left {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.l-right {
+  flex: 1;
+  width: 20%;
+}
+
+.l-right .l-img {
+  text-align: center;
+}
+
+.l-myself {
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border: 8px solid #8654de;
+}
+.llist{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-style: italic;
+font-weight: 100px;
+margin: 25px;
+padding-left: 45px;
+}
+
+.last-icons{
+  padding-left: 4rem;
+}
+.licon-logos img {
+  padding: 0.5rem;
+}
+.licon-logos img:hover{
+  transform: scale(1.1);
+}
